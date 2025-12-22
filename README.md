@@ -2,6 +2,13 @@
 
 **Transform the web into an executable operating system**
 
+[![Tests](https://img.shields.io/badge/tests-27%20passing-brightgreen)]()
+[![Python](https://img.shields.io/badge/python-3.8%2B-blue)]()
+[![License](https://img.shields.io/badge/license-MIT-blue)]()
+[![Code](https://img.shields.io/badge/code-2400%2B%20lines-orange)]()
+
+> While traditional systems retrieve *information*, intelligentOne retrieves *capabilities*.
+
 ## Overview
 
 intelligentOne is a revolutionary system that transforms the web from a passive information repository into an active, executable operating system. While traditional systems simply retrieve *information* from the web, intelligentOne retrieves *capabilities* - actionable functions that can be discovered, composed, and executed.
