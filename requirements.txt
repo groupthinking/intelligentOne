@@ -1,0 +1,11 @@
+# intelligentOne requirements
+# Core dependencies for transforming the web into an executable OS
+
+# No external dependencies required for the core implementation
+# The system is designed to be minimal and self-contained
+
+# Optional dependencies for production use:
+# requests>=2.31.0  # For actual HTTP requests
+# aiohttp>=3.9.0    # For async HTTP requests
+# beautifulsoup4>=4.12.0  # For HTML parsing
+# pyyaml>=6.0  # For YAML OpenAPI specs
