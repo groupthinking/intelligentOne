@@ -173,7 +173,7 @@ class SimulationLab:
         try:
             # Call LLM for judgment
             judgment_data = await self.llm_client.judge_execution(
-                hypothesis=hypothesis.dict(),
+                hypothesis=hypothesis.model_dump(),
                 execution_log=execution_log,
                 context=context,
             )
