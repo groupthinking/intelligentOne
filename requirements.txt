@@ -1,11 +1,22 @@
-# intelligentOne requirements
-# Core dependencies for transforming the web into an executable OS
+# intelligentOne Requirements
+# Self-evolving autonomous intelligence platform
 
-# No external dependencies required for the core implementation
-# The system is designed to be minimal and self-contained
+# MCP Framework
+mcp>=1.0.0
+fastmcp>=0.1.0
 
-# Optional dependencies for production use:
-# requests>=2.31.0  # For actual HTTP requests
-# aiohttp>=3.9.0    # For async HTTP requests
-# beautifulsoup4>=4.12.0  # For HTML parsing
-# pyyaml>=6.0  # For YAML OpenAPI specs
+# HTTP & Web
+httpx>=0.27.0
+beautifulsoup4>=4.12.0
+feedparser>=6.0.11
+
+# Data Validation
+pydantic>=2.5.0
+
+# LLM Integration
+openai>=1.10.0
+anthropic>=0.18.0
+
+# Testing
+pytest>=8.0.0
+pytest-asyncio>=0.23.0

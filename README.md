@@ -1,196 +1,267 @@
-# intelligentOne
+# 🧠 intelligentOne
 
-**Transform the web into an executable operating system**
+**The world's first self-evolving autonomous intelligence platform**
 
-[![Tests](https://img.shields.io/badge/tests-27%20passing-brightgreen)]()
+[![MCP Native](https://img.shields.io/badge/MCP-Native-blue)]()
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue)]()
-[![License](https://img.shields.io/badge/license-MIT-blue)]()
-[![Code](https://img.shields.io/badge/code-2400%2B%20lines-orange)]()
+[![License](https://img.shields.io/badge/license-MIT-green)]()
 
-> While traditional systems retrieve *information*, intelligentOne retrieves *capabilities*.
+> While others build static workflows, intelligentOne evolves them autonomously.
 
-## Overview
+## 🚀 The Billion-Dollar Opportunity
 
-intelligentOne is a revolutionary system that transforms the web from a passive information repository into an active, executable operating system. While traditional systems simply retrieve *information* from the web, intelligentOne retrieves *capabilities* - actionable functions that can be discovered, composed, and executed.
+intelligentOne represents a fundamental paradigm shift in how AI systems operate. This isn't another automation tool—it's the first platform that **writes, tests, and deploys its own capabilities autonomously**.
 
-## Core Concept
+### The Paradigm Shift
 
-The web contains billions of APIs, services, and interactive elements. intelligentOne treats these as executable capabilities rather than static content, creating a dynamic operating system where:
+| **Traditional Systems** | **intelligentOne** |
+|------------------------|-------------------|
+| Static, hardcoded workflows | Self-evolving, autonomous workflows |
+| Manual tool integration | Dynamic MCP-native tool discovery |
+| Human-designed pipelines | LLM-generated & LLM-judged recipes |
+| One-size-fits-all solutions | Context-adaptive intelligence |
+| Siloed capabilities | Composable atomic tools |
+| Degrades over time | Improves continuously |
 
-- **Web services become system calls** - APIs and endpoints are treated as OS-level capabilities
-- **Websites become executable resources** - Interactive elements are discoverable and executable
-- **Capabilities are composable** - Web functions can be chained and orchestrated
-- **Dynamic discovery** - Capabilities are discovered and registered at runtime
+## 🏗️ Architecture Overview
 
-## Architecture
+intelligentOne operates through three revolutionary layers:
+
+### 1. **Hypothesis Engine** 🧪
+The creative core that generates workflow ideas using LLM reasoning:
+- Analyzes objectives and context
+- Generates multiple workflow hypotheses
+- Combines atomic tools in novel ways
+- Learns from successful patterns
+
+### 2. **Simulation Lab** 🔬
+The quality gate that validates workflows before deployment:
+- Executes hypotheses in isolation
+- LLM-as-Judge scoring (Completeness 30%, Relevance 40%, Actionability 30%)
+- Automatic deployment threshold: **85+ score**
+- Zero risk to production systems
+
+### 3. **Blueprint Vault** 💾
+The memory that stores and evolves successful recipes:
+- Persistent JSON storage of proven workflows
+- Hot-reload capability for dynamic composition
+- Success metrics and performance tracking
+- Continuous improvement through execution feedback
 
 ```
-┌─────────────────────────────────────────────────┐
-│          intelligentOne Core Engine             │
-├─────────────────────────────────────────────────┤
-│  Capability Discovery  │  Capability Executor   │
-│  ───────────────────── │  ──────────────────── │
-│  • API Detection       │  • Function Execution  │
-│  • Service Mapping     │  • Parameter Binding   │
-│  • Schema Extraction   │  • Result Handling     │
-└────────────┬────────────────────────┬───────────┘
-             │                        │
-    ┌────────▼────────┐      ┌───────▼────────┐
-    │  Web Interface  │      │  OS Abstraction │
-    │    Adapter      │      │     Layer       │
-    └─────────────────┘      └────────────────┘
-             │                        │
-    ┌────────▼────────────────────────▼───────────┐
-    │           The Web as an OS                   │
-    │  APIs • Services • Interactive Elements      │
-    └──────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────┐
+│                    User Query/Objective                  │
+└────────────────────┬────────────────────────────────────┘
+                     │
+         ┌───────────▼──────────┐
+         │   Router Agent       │  Intent Classification
+         └───────────┬──────────┘
+                     │
+         ┌───────────▼──────────┐
+         │  Blueprint Vault     │  Check for existing
+         │   (Search)           │  workflow match
+         └───────────┬──────────┘
+                     │
+              Found? │ Not Found
+         ┌───────────▼──────────┐
+         │   Execute Blueprint  │
+         └──────────────────────┘
+                     │ Not Found
+         ┌───────────▼──────────────┐
+         │  Hypothesis Engine       │  Generate new
+         │  (LLM generates ideas)   │  workflow ideas
+         └───────────┬──────────────┘
+                     │
+         ┌───────────▼──────────────┐
+         │   Simulation Lab         │  Test & Judge
+         │   (LLM-as-Judge)         │  Score: 0-100
+         └───────────┬──────────────┘
+                     │
+              Score >= 85?
+         ┌───────────▼──────────────┐
+         │   Blueprint Vault        │  Auto-deploy
+         │   (Store & Deploy)       │  successful recipes
+         └──────────────────────────┘
 ```
 
-## Key Components
-
-### 1. Capability Discovery Engine
-Discovers executable capabilities from web resources:
-- API endpoint detection
-- Function signature extraction
-- Service capability mapping
-- Real-time capability registration
-
-### 2. Capability Executor
-Executes discovered capabilities:
-- Dynamic invocation
-- Parameter marshalling
-- Error handling and retry logic
-- Result transformation
-
-### 3. Web Interface Adapter
-Adapts web resources to OS-level abstractions:
-- HTTP to system call translation
-- WebSocket to process streams
-- REST/GraphQL to function calls
-
-### 4. OS Abstraction Layer
-Provides familiar OS primitives:
-- Process management (web service lifecycle)
-- File system (web resource organization)
-- Networking (capability communication)
-- Security (authentication and authorization)
-
-## Quick Start
+## ⚡ Quick Start
 
 ### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/groupthinking/intelligentOne.git
+cd intelligentOne
+
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
 pip install -r requirements.txt
+
+# Configure environment
+cp .env.example .env
+# Edit .env and add your API keys (OpenAI or Anthropic)
 ```
 
-### Basic Usage
+### Running with Claude Desktop
+
+Add to your Claude Desktop MCP configuration:
+
+**MacOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
+**Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
+
+```json
+{
+  "mcpServers": {
+    "intelligentone": {
+      "command": "python",
+      "args": ["/absolute/path/to/intelligentOne/intelligentone_server.py"],
+      "env": {
+        "OPENAI_API_KEY": "your-key-here",
+        "ANTHROPIC_API_KEY": "your-key-here"
+      }
+    }
+  }
+}
+```
+
+Restart Claude Desktop and you'll see intelligentOne tools available.
+
+### First Workflow Test
 
 ```python
-from intelligentone import IntelligentOne
+# In Claude Desktop, try:
+"Monitor TechCrunch RSS for AI chip announcements and alert me about urgent ones"
 
-# Initialize the OS
-os = IntelligentOne()
-
-# Discover capabilities from a service
-capabilities = os.discover("https://api.example.com")
-
-# Execute a capability
-result = os.execute("weather.get_forecast", {
-    "location": "San Francisco",
-    "days": 7
-})
-
-print(result)
+# intelligentOne will:
+# 1. Classify the intent (actionable)
+# 2. Check for existing blueprints
+# 3. Generate a new workflow hypothesis if needed
+# 4. Test it in Simulation Lab
+# 5. Auto-deploy if score >= 85
+# 6. Execute the workflow
 ```
 
-### Discovering Capabilities
+## 🎯 Use Cases
 
-```python
-# Discover from OpenAPI/Swagger
-capabilities = os.discover("https://api.example.com/swagger.json")
+### 1. **Competitive Intelligence Automation**
+```
+Query: "Monitor competitor product launches and calculate competitive delta"
 
-# Discover from GraphQL
-capabilities = os.discover("https://api.example.com/graphql", type="graphql")
-
-# List available capabilities
-for cap in os.list_capabilities():
-    print(f"{cap.name}: {cap.description}")
+intelligentOne creates:
+- RSS monitoring workflow
+- OGP metadata extraction
+- Competitive analysis scoring
+- Urgent alert system
 ```
 
-### Composing Capabilities
+### 2. **Market Research Pipeline**
+```
+Query: "Track AI chip industry news and identify breakthrough capabilities"
 
-```python
-# Chain multiple capabilities
-pipeline = os.pipeline([
-    ("geocode.address_to_coords", {"address": "123 Main St"}),
-    ("weather.get_forecast", lambda prev: {"lat": prev["lat"], "lon": prev["lon"]}),
-    ("notifications.send_email", lambda prev: {"body": prev["summary"]})
-])
-
-result = pipeline.execute()
+intelligentOne builds:
+- Multi-source RSS aggregation
+- Keyword-based filtering
+- Capability extraction from articles
+- Trend analysis and alerts
 ```
 
-## Examples
+### 3. **Autonomous Research Assistant**
+```
+Query: "Find and summarize latest developments in quantum computing"
 
-See the `examples/` directory for complete examples:
-- `weather_service.py` - Weather API capability discovery
-- `github_api.py` - GitHub API as OS capabilities
-- `web_automation.py` - Browser automation as capabilities
-- `capability_chain.py` - Composing multiple capabilities
-
-## Philosophy
-
-intelligentOne reimagines the web as a distributed, executable operating system:
-
-1. **Everything is a capability** - APIs, services, and interactive elements are treated as executable functions
-2. **Discovery over configuration** - Capabilities are discovered dynamically rather than hardcoded
-3. **Composition is key** - Simple capabilities combine to create complex behaviors
-4. **The web is the kernel** - The internet itself becomes the OS kernel, managing distributed capabilities
-
-## Use Cases
-
-- **Automated Workflows**: Compose web services into automated business processes
-- **Distributed Computing**: Treat web APIs as distributed system calls
-- **Intelligent Agents**: Agents that discover and execute capabilities autonomously
-- **API Orchestration**: Dynamic service composition without hardcoded integrations
-- **Web Automation**: Treat websites as executable programs
-
-## Development
-
-### Running Tests
-
-```bash
-python -m pytest tests/
+intelligentOne evolves:
+- Information gathering workflow
+- Content extraction and analysis
+- Summary generation
+- Knowledge base updates
 ```
 
-### Project Structure
+## 🛠️ Technology Stack
 
-```
-intelligentone/
-├── __init__.py           # Main module exports
-├── core.py               # Core IntelligentOne engine
-├── discovery.py          # Capability discovery engine
-├── executor.py           # Capability execution engine
-├── adapters/             # Web interface adapters
-│   ├── rest.py          # REST API adapter
-│   ├── graphql.py       # GraphQL adapter
-│   └── browser.py       # Browser automation adapter
-└── os_layer/            # OS abstraction layer
-    ├── process.py       # Process management
-    ├── filesystem.py    # Resource organization
-    └── security.py      # Auth and security
-```
+| Component | Technology | Purpose |
+|-----------|-----------|---------|
+| **MCP Server** | FastMCP | Native tool protocol integration |
+| **Hypothesis Engine** | GPT-4o / Claude 3.5 | Workflow generation |
+| **Simulation Lab** | LLM-as-Judge | Quality assurance |
+| **Blueprint Vault** | JSON Storage | Recipe persistence |
+| **Web Scraping** | httpx + BeautifulSoup | Content extraction |
+| **Feed Monitoring** | feedparser | RSS/Atom parsing |
+| **Data Validation** | Pydantic | Type safety |
 
-## Contributing
+## 📊 Atomic Tools
 
-Contributions are welcome! intelligentOne is about expanding the universe of executable web capabilities.
+intelligentOne provides five core atomic tools that combine into infinite possibilities:
 
-## License
+| Tool | Purpose | Example |
+|------|---------|---------|
+| `listen_to_rss()` | Monitor RSS feeds | Track TechCrunch AI news |
+| `extract_ogp_capabilities()` | Extract metadata | Get article details |
+| `search_internal_db()` | Query knowledge base | Find existing workflows |
+| `calculate_competitive_delta()` | Analyze gaps | Compare capabilities |
+| `send_alert()` | Notify users | Urgent updates |
 
-MIT License - See LICENSE file for details
+## 🗺️ Roadmap
 
-## Vision
+### Phase 1: Foundation ✅ (Complete)
+- ✅ MCP-native architecture
+- ✅ Atomic tools implementation
+- ✅ Hypothesis Engine with LLM generation
+- ✅ Simulation Lab with LLM-as-Judge
+- ✅ Blueprint Vault persistence
+- ✅ Dynamic composite tool loading
 
-intelligentOne represents a paradigm shift in how we interact with the web. Instead of navigating to websites and manually clicking buttons, we discover capabilities and execute them programmatically. The web becomes less like a library and more like a distributed operating system where every service is a potential system call waiting to be invoked.
+### Phase 2: Intelligence Enhancement (Q1 2025)
+- 🔄 Multi-model ensemble judgment
+- 🔄 A/B testing of workflow variants
+- 🔄 Automatic hyperparameter tuning
+- 🔄 Cross-blueprint learning
+- 🔄 Failure analysis and self-healing
 
-Welcome to the executable web.
+### Phase 3: Enterprise Scale (Q2 2025)
+- 📋 Multi-user Blueprint Vaults
+- 📋 Distributed execution engine
+- 📋 Advanced security sandboxing
+- 📋 Real-time collaboration
+- 📋 Enterprise integrations (Slack, Teams, Email)
+
+## 📚 Documentation
+
+- **[Architecture Deep Dive](docs/ARCHITECTURE.md)** - Technical implementation details
+- **[Getting Started Guide](docs/GETTING_STARTED.md)** - Step-by-step tutorial
+- **[API Reference](docs/API.md)** - Tool and function documentation (coming soon)
+
+## 🔒 Security
+
+- All workflow hypotheses execute in **simulation sandbox** before deployment
+- Blueprint Vault uses **JSON file storage** (no SQL injection risk)
+- MCP protocol provides **built-in authentication**
+- LLM API keys stored in **environment variables** (never committed)
+- Optional **approval threshold** configuration
+
+## 🤝 Contributing
+
+We welcome contributions! intelligentOne is about expanding the universe of autonomous intelligence capabilities.
+
+## 📜 License
+
+MIT License - See [LICENSE](LICENSE) file for details.
+
+## 🌟 Vision
+
+intelligentOne represents the future of AI systems:
+
+**Before**: Humans design workflows, AI executes them  
+**After**: AI designs, tests, and deploys workflows autonomously
+
+This is not incremental improvement—it's a fundamental shift in how intelligent systems evolve. While traditional systems degrade over time requiring manual updates, intelligentOne **gets smarter with every query**, building an ever-expanding library of proven capabilities.
+
+The platform that owns this self-evolution loop will dominate the next decade of AI automation.
+
+**Welcome to autonomous intelligence.**
+
+---
+
+Built with ❤️ by the intelligentOne team | [GitHub](https://github.com/groupthinking/intelligentOne) | [Issues](https://github.com/groupthinking/intelligentOne/issues)
