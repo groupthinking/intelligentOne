@@ -12,20 +12,6 @@ from intelligentone_server import (
     send_alert,
 )
 
-# Unwrap FunctionTool objects to get the actual functions for testing
-# When decorated with @mcp.tool(), functions become FunctionTool objects
-# We need to access the .fn attribute to call them in tests
-if hasattr(listen_to_rss, 'fn'):
-    listen_to_rss = listen_to_rss.fn
-if hasattr(extract_ogp_capabilities, 'fn'):
-    extract_ogp_capabilities = extract_ogp_capabilities.fn
-if hasattr(calculate_competitive_delta, 'fn'):
-    calculate_competitive_delta = calculate_competitive_delta.fn
-if hasattr(search_internal_db, 'fn'):
-    search_internal_db = search_internal_db.fn
-if hasattr(send_alert, 'fn'):
-    send_alert = send_alert.fn
-
 
 @pytest.mark.asyncio
 async def test_imports():
