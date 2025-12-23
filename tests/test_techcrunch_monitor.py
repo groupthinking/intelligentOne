@@ -17,6 +17,7 @@ from simulation_lab import SimulationLab, HypothesisTest
 from router_agent import route_query
 
 # Unwrap FunctionTool objects to get the actual functions for testing
+# Note: propose_and_test_workflow is not decorated, so it doesn't need unwrapping
 if hasattr(listen_to_rss, 'fn'):
     listen_to_rss = listen_to_rss.fn
 if hasattr(extract_ogp_capabilities, 'fn'):
@@ -25,8 +26,6 @@ if hasattr(calculate_competitive_delta, 'fn'):
     calculate_competitive_delta = calculate_competitive_delta.fn
 if hasattr(send_alert, 'fn'):
     send_alert = send_alert.fn
-if hasattr(propose_and_test_workflow, 'fn'):
-    propose_and_test_workflow = propose_and_test_workflow.fn
 
 
 @pytest.mark.asyncio
